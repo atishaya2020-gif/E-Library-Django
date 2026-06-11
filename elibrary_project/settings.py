@@ -37,6 +37,8 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'cloudinary_storage',
+    'cloudinary',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -166,4 +168,26 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATICFILES_STORAGE = (
     "whitenoise.storage.CompressedManifestStaticFilesStorage"
+)
+
+# Cloudinary Storage
+
+CLOUDINARY_STORAGE = {
+
+    'CLOUD_NAME': os.environ.get(
+        'CLOUDINARY_CLOUD_NAME'
+    ),
+
+    'API_KEY': os.environ.get(
+        'CLOUDINARY_API_KEY'
+    ),
+
+    'API_SECRET': os.environ.get(
+        'CLOUDINARY_API_SECRET'
+    ),
+}
+
+
+DEFAULT_FILE_STORAGE = (
+    'cloudinary_storage.storage.MediaCloudinaryStorage'
 )
