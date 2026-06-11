@@ -1,0 +1,244 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block extra_css %}
+
+<link 
+rel="stylesheet"
+href="{% static 'css/contri.css' %}"
+>
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+<div class="dashboard-page">
+
+
+
+<div class="dashboard-header">
+
+
+<h1>
+
+Welcome back, {{ user.first_name }}
+
+</h1>
+
+
+<p>
+
+Manage your uploaded books
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="stats-grid">
+
+
+<div class="stat-card">
+
+
+<h2>📚</h2>
+
+
+<h3>
+
+{{ books.count }}
+
+</h3>
+
+
+<p>
+
+Books Uploaded
+
+</p>
+
+
+</div>
+
+
+
+<div class="stat-card">
+
+
+<h2>⭐</h2>
+
+
+<h3>
+
+Active
+
+</h3>
+
+
+<p>
+
+Contributor
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<h2 class="section-title">
+
+Your Library
+
+</h2>
+
+
+
+
+
+
+
+<div class="upload-grid">
+
+
+
+{% for book in books %}
+
+
+
+<div class="dash-book">
+
+
+
+<div class="dash-icon">
+
+📕
+
+</div>
+
+
+
+<h3>
+
+{{ book.title }}
+
+</h3>
+
+
+
+
+<p>
+
+{{ book.category }}
+
+</p>
+
+
+
+
+<p>
+
+{{ book.pages }} pages
+
+</p>
+
+
+
+
+
+
+
+<div class="dash-actions">
+
+
+<a href="{% url 'viewBook' book.id %}">
+
+View
+
+</a>
+
+
+
+<a href="{% url 'editBook' book.id %}">
+
+Edit
+
+</a>
+
+
+
+<a href="{% url 'deleteBook' book.id %}">
+
+Delete
+
+</a>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+{% empty %}
+
+
+
+<div class="empty">
+
+
+📚
+
+
+<h2>
+
+No uploads yet
+
+</h2>
+
+
+</div>
+
+
+
+{% endfor %}
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+{% endblock %}

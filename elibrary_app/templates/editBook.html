@@ -1,0 +1,274 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block extra_css %}
+
+<link 
+rel="stylesheet"
+href="{% static 'css/addbook.css' %}"
+>
+
+{% endblock %}
+
+
+
+
+
+
+{% block content %}
+
+
+
+<div class="decor decor-book">
+
+✏️
+
+</div>
+
+
+
+<div class="decor decor-leaf">
+
+❧
+
+</div>
+
+
+
+
+
+
+
+<section class="upload-page">
+
+
+
+
+
+<div class="upload-card">
+
+
+
+
+
+
+<div class="book-icon">
+
+✏️
+
+</div>
+
+
+
+
+
+
+
+<h1>
+
+Edit Book
+
+</h1>
+
+
+
+
+
+
+
+<div class="divider">
+
+
+<span></span>
+
+✦
+
+<span></span>
+
+
+</div>
+
+
+
+
+
+
+
+
+<p>
+
+Modify your uploaded book details
+
+</p>
+
+
+
+
+
+
+
+
+
+
+<form method="POST" enctype="multipart/form-data">
+
+
+
+{% csrf_token %}
+
+
+
+
+
+
+
+
+{% for field in form %}
+
+
+
+
+
+
+<div class="input-box">
+
+
+
+
+
+<label>
+
+
+
+{% if field.label == "Title" %}
+
+📖
+
+
+{% elif field.label == "Summary" %}
+
+☷
+
+
+{% elif field.label == "Pages" %}
+
+▣
+
+
+{% elif field.label == "Pdf" %}
+
+📄
+
+
+{% elif field.label == "Category" %}
+
+🏷️
+
+
+{% else %}
+
+❖
+
+
+{% endif %}
+
+
+
+
+{{ field.label }}
+
+
+
+
+</label>
+
+
+
+
+
+
+
+
+{{ field }}
+
+
+
+
+
+
+
+{% if field.errors %}
+
+
+<div class="error">
+
+
+{{ field.errors }}
+
+
+</div>
+
+
+{% endif %}
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endfor %}
+
+
+
+
+
+
+
+
+
+<button class="upload-btn">
+
+
+Save Changes
+
+
+</button>
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+{% endblock %}

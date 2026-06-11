@@ -1,0 +1,320 @@
+.view-page{
+
+
+    min-height:80vh;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    padding:70px 20px;
+
+
+
+}
+
+
+
+
+
+.book-view-card{
+
+
+    width:650px;
+
+
+    padding:60px;
+
+
+    text-align:center;
+
+
+    border-radius:28px;
+
+
+    background:var(--card);
+
+
+    border:1px solid var(--border);
+
+
+    backdrop-filter:blur(20px);
+
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.18);
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+
+}
+
+
+
+
+
+
+.book-view-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:0;
+
+
+    left:0;
+
+
+    width:100%;
+
+
+    height:5px;
+
+
+    background:
+    linear-gradient(
+    90deg,
+    #850000,
+    #d90429,
+    #ff4d6d
+    );
+
+}
+
+
+
+
+
+
+
+
+.book-cover{
+
+
+    width:90px;
+
+
+    height:90px;
+
+
+    margin:auto;
+
+
+    margin-bottom:25px;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    font-size:45px;
+
+
+    background:
+    rgba(217,4,41,.15);
+
+
+}
+
+
+
+
+
+
+
+
+.book-view-card h1{
+
+
+    font-family:'Playfair Display',serif;
+
+
+    font-size:50px;
+
+
+}
+
+
+
+
+
+
+
+
+.book-meta{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:20px;
+
+
+    margin:25px 0;
+
+
+}
+
+
+
+
+.book-meta span{
+
+
+    padding:8px 20px;
+
+
+    border-radius:30px;
+
+
+    background:
+    rgba(217,4,41,.15);
+
+
+    color:#ff4d6d;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+
+
+
+
+.summary{
+
+
+    margin:30px 0;
+
+
+    line-height:1.8;
+
+
+    color:var(--muted);
+
+
+}
+
+
+
+
+
+
+
+
+.view-buttons{
+
+
+    display:flex;
+
+
+    gap:20px;
+
+
+
+}
+
+
+
+
+
+
+.view-buttons a{
+
+
+    flex:1;
+
+
+    padding:15px;
+
+
+    border-radius:12px;
+
+
+    background:#d90429;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-weight:700;
+
+
+    transition:.3s;
+
+
+
+}
+
+
+
+
+
+
+
+.view-buttons a:hover{
+
+
+    transform:translateY(-3px);
+
+
+    box-shadow:
+    0 10px 30px rgba(217,4,41,.35);
+
+
+
+}
+
+
+
+
+
+
+
+
+.uploaded{
+
+
+    margin-top:30px;
+
+
+    color:var(--muted);
+
+
+
+}

@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block extra_css %}
+
+<link 
+rel="stylesheet"
+href="{% static 'css/auth.css' %}"
+>
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+
+<div class="auth-page">
+
+
+
+<div class="auth-card">
+
+
+
+<div class="auth-icon">
+
+📖
+
+</div>
+
+
+
+
+<h1>
+
+Join Library
+
+</h1>
+
+
+
+<p>
+
+Create your contributor account
+
+</p>
+
+
+
+
+
+<form method="POST">
+
+
+
+{% csrf_token %}
+
+
+
+
+<div class="input-box">
+
+
+<label>
+
+First Name
+
+</label>
+
+
+<input 
+type="text"
+name="first--name"
+required>
+
+
+</div>
+
+
+
+
+
+
+<div class="input-box">
+
+
+<label>
+
+Last Name
+
+</label>
+
+
+<input 
+type="text"
+name="last--name"
+required>
+
+
+</div>
+
+
+
+
+
+
+<div class="input-box">
+
+
+<label>
+
+Email
+
+</label>
+
+
+<input 
+type="email"
+name="email"
+required>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="input-box">
+
+
+<label>
+
+Password
+
+</label>
+
+
+<input 
+type="password"
+name="password"
+required>
+
+
+</div>
+
+
+
+
+
+
+
+<button class="auth-btn">
+
+Create Account
+
+</button>
+
+
+
+
+</form>
+
+
+
+
+
+<div class="switch">
+
+
+Already registered?
+
+<a href="{% url 'login' %}">
+
+Login
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+{% endblock %}

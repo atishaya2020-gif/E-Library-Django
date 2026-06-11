@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block extra_css %}
+
+<link 
+rel="stylesheet"
+href="{% static 'css/auth.css' %}"
+>
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+<div class="auth-page">
+
+
+<div class="auth-card">
+
+
+
+<div class="auth-icon">
+
+📚
+
+</div>
+
+
+
+<h1>
+
+Welcome Back
+
+</h1>
+
+
+
+<p>
+
+Continue your reading journey
+
+</p>
+
+
+
+
+
+<form method="POST">
+
+
+{% csrf_token %}
+
+
+
+
+<div class="input-box">
+
+
+<label>
+
+Email
+
+</label>
+
+
+<input 
+type="text"
+name="email"
+required
+>
+
+
+</div>
+
+
+
+
+
+<div class="input-box">
+
+
+<label>
+
+Password
+
+</label>
+
+
+<input 
+type="password"
+name="password"
+required
+>
+
+
+</div>
+
+
+
+
+
+
+<button class="auth-btn">
+
+Login
+
+</button>
+
+
+
+
+
+</form>
+
+
+
+
+
+<div class="switch">
+
+
+New here?
+
+<a href="{% url 'register' %}">
+
+Create account
+
+</a>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+{% endblock %}

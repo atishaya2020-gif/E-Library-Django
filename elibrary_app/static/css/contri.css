@@ -1,0 +1,302 @@
+.dashboard-page{
+
+    padding:60px 8%;
+
+}
+
+
+
+
+.dashboard-header{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.dashboard-header h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:55px;
+
+}
+
+
+
+
+.dashboard-header p{
+
+    color:var(--muted);
+
+}
+
+
+
+
+
+
+.stats-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+
+    gap:25px;
+
+
+    margin-bottom:60px;
+
+}
+
+
+
+
+
+.stat-card{
+
+
+    background:var(--card);
+
+
+    border:1px solid var(--border);
+
+
+    padding:35px;
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+    backdrop-filter:blur(20px);
+
+
+    transition:.3s;
+
+}
+
+
+
+.stat-card:hover{
+
+
+    transform:translateY(-8px);
+
+}
+
+
+
+
+.stat-card h2{
+
+    font-size:40px;
+
+}
+
+
+
+.stat-card h3{
+
+    font-size:28px;
+
+}
+
+
+
+
+
+
+
+.section-title{
+
+    font-family:'Playfair Display',serif;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+
+
+.upload-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+
+    gap:30px;
+
+}
+
+
+
+
+
+
+
+
+.dash-book{
+
+
+    padding:30px;
+
+
+    border-radius:25px;
+
+
+    background:var(--card);
+
+
+    border:1px solid var(--border);
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+.dash-book::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:0;
+
+    left:0;
+
+
+    width:100%;
+
+    height:4px;
+
+
+    background:#d90429;
+
+
+}
+
+
+
+
+.dash-icon{
+
+
+    font-size:40px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+.dash-book h3{
+
+
+    font-family:'Playfair Display',serif;
+
+}
+
+
+
+
+.dash-book p{
+
+
+    color:#ff4d6d;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+
+.dash-actions{
+
+
+    display:flex;
+
+
+    gap:10px;
+
+
+    margin-top:25px;
+
+}
+
+
+
+.dash-actions a{
+
+
+    flex:1;
+
+
+    text-align:center;
+
+
+    padding:10px;
+
+
+    border-radius:10px;
+
+
+    background:#d90429;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+.empty{
+
+    font-size:40px;
+
+    color:var(--muted);
+
+}

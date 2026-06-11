@@ -1,0 +1,402 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block extra_css %}
+
+<link 
+rel="stylesheet"
+href="{% static 'css/explore.css' %}"
+>
+
+{% endblock %}
+
+
+
+
+
+
+{% block content %}
+
+
+
+
+
+<section class="explore-page">
+
+
+
+
+
+<div class="explore-header">
+
+
+
+<h1>
+
+Explore Library
+
+</h1>
+
+
+
+
+<p>
+
+Discover knowledge shared by readers
+
+</p>
+
+
+
+
+
+
+
+
+<form method="GET">
+
+
+
+
+
+<div class="search-box">
+
+
+
+<input
+
+type="text"
+
+name="search"
+
+placeholder="Search books..."
+
+value="{{ search|default:'' }}"
+
+>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="category-filter">
+
+
+
+
+
+<a href="{% url 'explore' %}">
+
+All
+
+</a>
+
+
+
+
+
+
+<a href="?category=Education">
+
+Education
+
+</a>
+
+
+
+
+
+
+<a href="?category=Science">
+
+Science
+
+</a>
+
+
+
+
+
+
+<a href="?category=Fiction">
+
+Fiction
+
+</a>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="books-grid">
+
+
+
+
+
+
+{% for book in books %}
+
+
+
+
+
+
+<div class="book-card">
+
+
+
+
+
+
+
+<div class="book-icon">
+
+
+📕
+
+
+</div>
+
+
+
+
+
+
+
+<h3>
+
+
+{{ book.title }}
+
+
+</h3>
+
+
+
+
+
+
+
+
+<span class="category">
+
+
+{{ book.category }}
+
+
+</span>
+
+
+
+
+
+
+
+
+<p>
+
+
+{{ book.summary|truncatechars:120 }}
+
+
+</p>
+
+
+
+
+
+
+
+
+
+<div class="book-info">
+
+
+📄 {{ book.pages }} pages
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="author">
+
+
+
+Uploaded by 
+
+
+<strong>
+
+
+{{ book.author.username }}
+
+
+</strong>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="book-actions">
+
+
+
+
+
+<a href="{% url 'viewBook' book.id %}">
+
+
+Details
+
+
+</a>
+
+
+
+
+
+
+<a href="{{ book.pdf.url }}" target="_blank">
+
+
+Read
+
+
+</a>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+{% empty %}
+
+
+
+
+
+
+<div class="empty">
+
+
+
+📚
+
+
+<h2>
+
+No books found
+
+</h2>
+
+
+
+<p>
+
+Try another search
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endfor %}
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+{% endblock %}

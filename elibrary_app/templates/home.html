@@ -1,0 +1,263 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block extra_css %}
+
+<link 
+rel="stylesheet"
+href="{% static 'css/home.css' %}"
+>
+
+{% endblock %}
+
+
+
+
+
+
+{% block content %}
+
+
+
+<section class="hero">
+
+
+
+
+
+<div class="hero-content">
+
+
+
+<div class="hero-icon">
+
+📚
+
+</div>
+
+
+
+
+<h1>
+
+
+Build Your Digital
+
+<span>
+
+Knowledge Vault
+
+</span>
+
+
+</h1>
+
+
+
+
+
+
+<p>
+
+
+Explore, upload and share books with readers
+around the world.
+
+
+
+</p>
+
+
+
+
+
+
+
+<div class="hero-buttons">
+
+
+
+<a 
+href="{% url 'explore' %}"
+class="primary-btn"
+>
+
+Explore Library
+
+
+</a>
+
+
+
+
+
+
+{% if user.is_authenticated %}
+
+
+<a 
+href="{% url 'addBook' %}"
+class="secondary-btn"
+>
+
+Share Book
+
+
+</a>
+
+
+
+{% else %}
+
+
+
+<a 
+href="{% url 'register' %}"
+class="secondary-btn"
+>
+
+Join Now
+
+
+</a>
+
+
+
+{% endif %}
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="stats">
+
+
+
+
+
+<div class="stat-box">
+
+
+<h2>
+
+📖
+
+</h2>
+
+
+<h3>
+
+Unlimited
+
+</h3>
+
+
+<p>
+
+Books
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="stat-box">
+
+
+<h2>
+
+🌎
+
+</h2>
+
+
+<h3>
+
+Community
+
+</h3>
+
+
+<p>
+
+Readers
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="stat-box">
+
+
+<h2>
+
+⚡
+
+</h2>
+
+
+<h3>
+
+Instant
+
+</h3>
+
+
+<p>
+
+Access
+
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</section>
+
+
+
+
+{% endblock %}

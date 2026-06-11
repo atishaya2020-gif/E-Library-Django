@@ -1,0 +1,21 @@
+# virtual environments
+.venv/
+myenv/
+env/
+
+# python generated files
+__pycache__/
+*.pyc
+
+# database
+db.sqlite3
+
+# secret settings
+.env
+
+# uploaded files
+pdfs/
+media/
+
+# editor
+.vscode/

@@ -1,0 +1,392 @@
+/* ======================
+DELETE PAGE
+====================== */
+
+
+.delete-page{
+
+
+    min-height:80vh;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    padding:60px 20px;
+
+
+}
+
+
+
+
+
+
+.delete-card{
+
+
+    width:560px;
+
+
+    padding:70px 55px;
+
+
+    text-align:center;
+
+
+    background:var(--card);
+
+
+    border-radius:28px;
+
+
+    border:1px solid var(--border);
+
+
+    backdrop-filter:blur(20px);
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    box-shadow:
+
+    0 35px 90px rgba(0,0,0,.25);
+
+
+}
+
+
+
+
+
+
+.delete-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:0;
+
+
+    left:0;
+
+
+    height:5px;
+
+
+    width:100%;
+
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        #780000,
+
+        #d90429,
+
+        #ff4d6d
+
+    );
+
+
+}
+
+
+
+
+
+
+
+.delete-icon{
+
+
+    width:90px;
+
+
+    height:90px;
+
+
+    margin:auto;
+
+
+    margin-bottom:30px;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    border-radius:50%;
+
+
+    background:rgba(217,4,41,.15);
+
+
+    font-size:45px;
+
+
+}
+
+
+
+
+
+
+
+
+
+.delete-card h1{
+
+
+    font-family:'Playfair Display',serif;
+
+
+    font-size:55px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+
+
+
+
+.delete-card p{
+
+
+    color:var(--muted);
+
+
+    font-size:18px;
+
+
+    line-height:1.8;
+
+
+    margin-bottom:45px;
+
+
+}
+
+
+
+
+
+
+.delete-card strong{
+
+
+    color:var(--text);
+
+
+}
+
+
+
+
+
+
+
+
+.delete-actions{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+
+
+
+.delete-actions a{
+
+
+    padding:15px 45px;
+
+
+    border-radius:14px;
+
+
+    text-decoration:none;
+
+
+    color:var(--muted);
+
+
+    font-weight:700;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+
+.delete-actions a:hover{
+
+
+    color:#d90429;
+
+
+    transform:translateY(-3px);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+.delete-actions button{
+
+
+    padding:15px 55px;
+
+
+    border:none;
+
+
+    border-radius:14px;
+
+
+    background:#d90429;
+
+
+    color:white;
+
+
+    font-size:16px;
+
+
+    font-weight:700;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+
+
+.delete-actions button:hover{
+
+
+    transform:translateY(-3px);
+
+
+    box-shadow:
+
+    0 15px 35px rgba(217,4,41,.4);
+
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:700px){
+
+
+    .delete-card{
+
+
+        padding:50px 25px;
+
+
+    }
+
+
+
+    .delete-actions{
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+    .delete-actions a,
+
+    .delete-actions button{
+
+
+        width:100%;
+
+
+    }
+
+
+}
+
+
+
+
+

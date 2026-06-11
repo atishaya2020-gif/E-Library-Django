@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block extra_css %}
+
+<link 
+rel="stylesheet"
+href="{% static 'css/viewBook.css' %}"
+>
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+<div class="view-page">
+
+
+<div class="book-view-card">
+
+
+
+<div class="book-cover">
+
+📖
+
+</div>
+
+
+
+
+<h1>
+
+{{ book.title }}
+
+</h1>
+
+
+
+
+
+<div class="book-meta">
+
+
+<span>
+
+{{ book.category }}
+
+</span>
+
+
+
+<span>
+
+{{ book.pages }} pages
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+<p class="summary">
+
+{{ book.summary }}
+
+</p>
+
+
+
+
+
+
+
+<div class="view-buttons">
+
+
+
+<a 
+href="{{ book.pdf.url }}"
+target="_blank">
+
+Read PDF
+
+</a>
+
+
+
+
+<a 
+href="{{ book.pdf.url }}"
+download>
+
+Download
+
+</a>
+
+
+
+
+</div>
+
+
+
+
+
+
+<p class="uploaded">
+
+
+Uploaded by {{ book.author.username }}
+
+
+</p>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+{% endblock %}

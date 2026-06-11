@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block extra_css %}
+
+<link 
+rel="stylesheet"
+href="{% static 'css/deleteBook.css' %}"
+>
+
+{% endblock %}
+
+
+
+
+
+
+{% block content %}
+
+
+
+
+<section class="delete-page">
+
+
+
+
+
+<div class="delete-card">
+
+
+
+
+
+
+<div class="delete-icon">
+
+⚠️
+
+</div>
+
+
+
+
+
+
+
+<h1>
+
+Delete Book?
+
+</h1>
+
+
+
+
+
+
+
+
+<p>
+
+
+Are you sure you want to delete
+
+
+<strong>
+
+{{ book.title }}
+
+</strong>
+
+
+?
+
+<br>
+
+
+This action cannot be undone.
+
+
+
+</p>
+
+
+
+
+
+
+
+
+
+<div class="delete-actions">
+
+
+
+
+
+<a href="{% url 'contri' %}">
+
+
+Cancel
+
+
+</a>
+
+
+
+
+
+
+
+<form method="POST">
+
+
+
+{% csrf_token %}
+
+
+
+<button>
+
+
+Delete
+
+
+</button>
+
+
+
+
+</form>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+.delete-actions button{
+
+
+background:#d90429;
+
+
+color:white;
+
+
+cursor:pointer;
+
+
+transition:.3s;
+
+
+}
+
+
+
+
+.delete-actions button:hover{
+
+
+transform:translateY(-3px);
+
+
+box-shadow:
+0 15px 35px rgba(217,4,41,.35);
+
+
+}
+
+
+
+
+.delete-actions a{
+
+
+background:transparent;
+
+
+color:var(--muted);
+
+
+transition:.3s;
+
+
+}
+
+
+
+
+.delete-actions a:hover{
+
+
+color:#d90429;
+
+
+}
+
+{% endblock %}
