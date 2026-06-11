@@ -1,44 +1,46 @@
-# 📚 E-Library Platform
+# 📚 E-Library Django
 
-A modern full-stack digital library web application built using Django.
+A full-stack E-Library web application built using Django that allows users to register, login, upload books, explore available books, and read/download PDFs online.
 
-E-Library allows users to upload, manage, discover, read and download books through a clean and interactive interface.
+This project is deployed with a production-ready setup using PostgreSQL, Cloudinary, WhiteNoise, and Render.
 
-## 🌍 Live Demo
+---
 
-https://your-render-link.onrender.com
+## 🌐 Live Demo
+
+🔗 https://e-library-django-82z7.onrender.com/
 
 ---
 
 ## ✨ Features
 
-### 👤 User System
+### 👤 User Authentication
 - User registration
 - Secure login/logout
-- User-specific dashboard
-- Profile dropdown
+- Session management
+- User-based book uploads
 
-### 📚 Book Management
-- Upload books with PDF files
-- Edit uploaded books
-- Delete books safely with confirmation
-- View detailed book information
-- Read PDFs directly in browser
-- Download books
+### 📖 Book Management
+- Upload books with:
+  - Title
+  - Category
+  - Number of pages
+  - Description
+  - PDF file
 
-### 🔍 Discovery
-- Explore all books
-- Search books by title
-- Search through descriptions
-- Filter by category
+- Explore uploaded books
+- View book details
+- Read PDF online
+- Download PDF files
 
-### 🎨 User Interface
-- Modern glass-style design
-- Dark / Light mode
-- Responsive layout
-- Animated components
-- Flash notifications
-- Custom typography
+### ☁️ Cloud Storage
+- Uploaded PDFs are stored permanently using Cloudinary
+- Production-safe media handling
+
+### 🎨 Frontend
+- Responsive user interface
+- Custom CSS styling
+- Dark themed design
 
 ---
 
@@ -46,65 +48,98 @@ https://your-render-link.onrender.com
 
 ### Backend
 - Python
-- Django
-- SQLite
+- Django 5
+- Django Authentication System
 
-### Frontend
-- HTML5
-- CSS3
-- Bootstrap
-- JavaScript
+### Database
+- PostgreSQL (Production)
+- SQLite (Development)
 
-### Tools
+### Storage
+- Cloudinary
+
+### Deployment
+- Render
+- Gunicorn
+- WhiteNoise
+
+### Version Control
 - Git
 - GitHub
 
 ---
 
-## 📸 Screenshots
+## 🏗 Project Architecture
 
-### 🏠 Home Page
+```text
+User Browser
+      |
+      ↓
+Render Server
+      |
+      ↓
+Gunicorn
+      |
+      ↓
+Django Application
+      |
+      ├── PostgreSQL Database
+      |
+      ├── Cloudinary Media Storage
+      |
+      └── WhiteNoise Static Files
+```
 
-![Home](screenshots/home.png)
+---
 
+## 📂 Project Structure
 
-### 📚 Explore Page
+```text
+E-Library-Django/
 
-![Explore](screenshots/explore.png)
-
-
-### 📊 Dashboard
-
-![Dashboard](screenshots/dashboard.png)
-
-### ➕ Add Book
-
-![Add Book](screenshots/add-book.png)
-
+├── elibrary_project/
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── elibrary_app/
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── templates/
+│   └── management/
+│
+├── static/
+│   └── css/
+│
+├── requirements.txt
+├── manage.py
+└── README.md
+```
 
 ---
 
 ## ⚙️ Installation
 
-Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/atishaya2020-gif/E-Library-Django.git
 ```
 
-Move into project
+Move into the folder:
 
 ```bash
 cd E-Library-Django
 ```
 
-Create virtual environment
+Create virtual environment:
 
 ```bash
 python -m venv .venv
 ```
 
-Activate environment
+Activate environment:
 
 Windows:
 
@@ -112,44 +147,86 @@ Windows:
 .venv\Scripts\activate
 ```
 
-Install dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Apply migrations
+Apply migrations:
 
 ```bash
 python manage.py migrate
 ```
 
-Run server
+Run server:
 
 ```bash
 python manage.py runserver
 ```
 
-Open:
+---
 
-```
-http://127.0.0.1:8000/
+## 🔐 Environment Variables
+
+Create environment variables:
+
+```env
+DATABASE_URL=
+
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+
+ADMIN_USERNAME=
+ADMIN_EMAIL=
+ADMIN_PASSWORD=
 ```
 
 ---
 
-## 🚀 Future Improvements
+## 📸 Screenshots
 
-- Book ratings
-- Comments system
-- Favorites collection
-- Advanced recommendations
-- Cloud PDF storage
+(Add screenshots here)
+
+---
+
+## 🚀 Deployment
+
+The application is deployed using Render:
+
+Production services:
+
+- Web Service → Render
+- Database → PostgreSQL
+- Media Files → Cloudinary
+- Static Files → WhiteNoise
+
+---
+
+## 📚 Learning Outcomes
+
+Through this project I learned:
+
+- Django MVC/MVT architecture
+- Authentication system
+- Database models and migrations
+- File upload handling
+- Static and media file management
+- PostgreSQL integration
+- Cloud deployment workflow
+- Environment variables
+- Debugging production errors
 
 ---
 
 ## 👨‍💻 Developer
 
-Built by **Atishaya Jain**
+Created by **Atishaya Jain**
 
+GitHub: https://github.com/atishaya2020-gif
+
+---
+
+⭐ If you like this project, consider giving it a star!
 ---
