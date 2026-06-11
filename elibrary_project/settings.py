@@ -40,15 +40,15 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
 
-    "cloudinary_storage",
-    "cloudinary",
-
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    "cloudinary_storage",
+    "cloudinary",
 
     "elibrary_app",
 ]
@@ -179,6 +179,11 @@ STATIC_URL = "/static/"
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+STATICFILES_DIRS = [
+
+    BASE_DIR / "static",
+
+]
 
 STATICFILES_STORAGE = (
     "django.contrib.staticfiles.storage.StaticFilesStorage"
