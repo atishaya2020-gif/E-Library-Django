@@ -1,21 +1,28 @@
-# virtual environments
-.venv/
-myenv/
-env/
-
-# python generated files
+# Python
 __pycache__/
 *.pyc
 
-# database
+
+# Virtual Environment
+.venv/
+venv/
+
+
+# Database
 db.sqlite3
 
-# secret settings
-.env
 
-# uploaded files
-pdfs/
+# Media uploads
 media/
 
-# editor
+
+# Environment variables
+.env
+
+
+# VS Code
 .vscode/
+
+
+# Django
+staticfiles/
