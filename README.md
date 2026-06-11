@@ -59,19 +59,23 @@ E-Library allows users to upload, manage, discover, read and download books thro
 
 ## 📸 Screenshots
 
-### Home Page
+### 🏠 Home Page
 
-(Add screenshot here)
-
-
-### Explore Page
-
-(Add screenshot here)
+![Home](screenshots/home.png)
 
 
-### Dashboard
+### 📚 Explore Page
 
-(Add screenshot here)
+![Explore](screenshots/explore.png)
+
+
+### 📊 Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### ➕ Add Book
+
+![Add Book](screenshots/add-book.png)
 
 
 ---
