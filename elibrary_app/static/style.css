@@ -1,0 +1,61 @@
+.navbar{
+    background-color: #B1C381;
+    font-weight: 600;
+}
+.nav-link{
+    margin: 0 1rem;
+}
+.navbar-brand{
+    font-size: 2rem;
+}
+
+/* Brand */
+.brand--section{
+    padding:5% 7%;
+    color: #B1C381;
+    font-weight: 600;
+}
+.brand--details{
+    padding: 3% 7%;
+    color: #B1C381;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+/* Features */
+.feature--section{
+    padding: 5% 7%;
+    background-color: #B1C381;
+    font-weight: 600;
+}
+.feature--icon{
+    padding: 2rem;
+}
+
+/* Add your Book */
+.addBook--section{
+    padding: 5% 7%;
+    color: #B1C381;
+    font-weight: 600;
+}
+
+/* Footer */
+.footer--section{
+    padding: 5% 7%;
+    background-color: #B1C381;
+    font-weight: 600;
+}
+
+/* Explore */
+
+.explore--section{
+    padding: 3% 5%;
+    color: #B1C381;
+    font-weight: 600;
+}
+
+.explore--section input{
+    color:#B1C381;
+}
+
+/* Register */

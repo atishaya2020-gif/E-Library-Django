@@ -1,0 +1,19 @@
+.add--section{
+    padding: 5% 7%;
+    font-weight: 600;
+}
+.add--section form{
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+}
+
+.btn{
+    width: 30%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    background-color: #B1C381;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+}
